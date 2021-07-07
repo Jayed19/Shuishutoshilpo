@@ -9,5 +9,14 @@
   <p>Name: {{name}}</p>
   <p>Mobile: {{mobile}}</p>
   <p>Email: {{email}}</p>
+  <p> Order List:
+  <ul class="list">
+  {% for row in orderList %}
+  <li class="list-item">{{row}}</li>
+  {% endfor %}
+  <ul>
+  </p>
+
+  
 </div>
 {% endblock  %}
