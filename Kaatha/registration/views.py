@@ -1,12 +1,9 @@
 from django.shortcuts import render
+from .models import registrationpage
 
 # Create your views here.
 
 def home(request):
-    user={
-        "name": "Jayed Ibrahim",
-        "mobile":"01917858019",
-        "email":"jayed19@gmail.com",
-        "orderList":["RK001","GJ005","BD001"]
-    }
+    reginfo=registrationpage.objects.all()
+    user={"reg" :reginfo}
     return render(request,'registration/registration.html',user)
