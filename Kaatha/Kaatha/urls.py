@@ -10,4 +10,6 @@ urlpatterns = [
     path('', views.home),
     path('regular/', include('regular.urls')),
     path('registration/', include('registration.urls')),
+    path('contact/', include('contact.urls')),
+
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
