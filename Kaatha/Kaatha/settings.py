@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     #Custom App
     'regular',
     'registration',
-    'contact'
+    'contact',
+    'authentication'
 ]
 
 MIDDLEWARE = [

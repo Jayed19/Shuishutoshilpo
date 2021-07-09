@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+{%block body%}
+
+
+
+
+
+<!-- Contact-Us Form With A Map - START -->
+
+
+<div class="container">
+    <div><h1>Login</h1></div>
+    <br />
+    <div class="row,text-center">
+
+        <div class="col-md-6">
+            <form class="my-form" METHOD="POST" ACTION="">
+            {% csrf_token %}
+                <div class="form-group">
+                    <label for="form-name">User Name</label>
+                    <input type="text" name="user" class="form-control" id="form-name" placeholder="Name">
+                </div>
+                    <div class="form-group">
+                    <label for="form-name">Email</label>
+                    <input type="email" name="email" class="form-control" id="form-name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="form-password">Password</label>
+                    <input type="password" name="password" class="form-control" id="form-email" placeholder="Email Address">
+                </div>
+                <div class="text-center">
+                 <button class="btn btn-success" type="submit">Registration</button>
+                </div>
+                <div class="text-center">
+                    <a href="/login">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .my-form {
+        color: #305896;
+    }
+    .my-form .btn-default {
+        background-color: #305896;
+        color: #fff;
+        border-radius: 0;
+    }
+    .my-form .btn-default:hover {
+        background-color: #4498C6;
+        color: #fff;
+    }
+    .my-form .form-control {
+        border-radius: 0;
+    }
+</style>
+
+
+
+<!-- Contact-Us Form With A Map - END -->
+
+
+
+{%endblock%}
