@@ -11,12 +11,22 @@ def authlogin(request):
         userinfo=authenticate(request,username=uname,password=pwrd)
         if userinfo is not None:
             login(request,userinfo)
-            return redirect('/contact')
+            return redirect('login.profile')
 
         else:
             print("invalid user or password")
 
     return render(request,'authentication/login.html')
 
+
+def profile(request):
+    return render(request,'authentication/profile.html')
+
 def registration(request):
     return render(request,'authentication/registration.html')
+
+def userlogout(request):
+    logout(request)
+    return redirect('login')
+
+   

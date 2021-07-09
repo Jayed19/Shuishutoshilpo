@@ -1,0 +1,69 @@
+{% extends 'layout.html' %}
+
+{%block body%}
+
+<div class="container">
+
+
+
+<!-- Contact-Us Form With A Map - START -->
+
+
+<div class="container">
+    <div><h1>Contact Us</h1></div>
+    <br />
+    <div class="row">
+
+        <div class="col-md-6">
+            <form class="my-form" METHOD="POST" ACTION="">
+            {% csrf_token %}
+                <div class="form-group">
+                    <label for="form-name">Name</label>
+                    <input type="text" name="name" class="form-control" id="form-name" placeholder="{{user.username}}">
+                </div>
+                <div class="form-group">
+                    <label for="form-email">Email Address</label>
+                    <input type="email" name="email" class="form-control" id="form-email" placeholder="{{user.email}}">
+                </div>
+                <div class="form-group">
+                    <label for="form-subject">Telephone</label>
+                    <input type="text" name="phone" class="form-control" id="form-subject" placeholder="{{user.phone}}">
+                </div>
+                <div class="form-group">
+                    <label for="form-message">Email your Message</label>
+                    <textarea name="msg" class="form-control" id="form-message" placeholder="{{user.msg}}"></textarea>
+                </div>
+                <div class="text-center">
+                <a href="{% url 'logout.profile'%}">Logout </a>
+                </div>
+              
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .my-form {
+        color: #305896;
+    }
+    .my-form .btn-default {
+        background-color: #305896;
+        color: #fff;
+        border-radius: 0;
+    }
+    .my-form .btn-default:hover {
+        background-color: #4498C6;
+        color: #fff;
+    }
+    .my-form .form-control {
+        border-radius: 0;
+    }
+</style>
+
+
+
+<!-- Contact-Us Form With A Map - END -->
+
+</div>
+
+{%endblock%}
